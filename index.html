@@ -11,76 +11,75 @@
 
 <body>
 
+  <div class="card mt-3 w-50 mx-auto">
+    <div class="card-header w-100 mx-auto mb-3"> <strong>Paymen for taxes</strong></div>
+    <form class="row w-100 mx-auto">
 
-  <div class="card-header w-50 mx-auto mb-3"> <strong>Paymen for taxes</strong></div>
-  <form class="row g-3 w-50 mx-auto border border-secondary">
+      <div class="alert alert-danger col-12" role="alert">
+        Algunos campos no se llenaron!
+      </div>
+      <div class="col-md-5">
+        <label for="tarjeta" class="form-label">Card</label>
+        <input type="text" class="form-control" id="tarjeta" placeholder="XXXXXXXXXXXX">
+      </div>
+      <div class="col-md-3">
+        <label for="cvc" class="form-label">CVC #</label>
+        <input type="text" class="form-control" id="cvc" placeholder="000">
+      </div>
+      <div class="col-md-3">
+        <label for="cantidad" class="form-label">Amount</label>
+        <input type="text" class="form-control" id="cantidad" placeholder="Amount">
+      </div>
+      <div class="col-6">
+        <label for="inputAddress" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="col-6">
+        <label for="inputAddress2" class="form-label">apellido</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="col-md-6">
+        <label for="ciudad" class="form-label">Ciudad</label>
+        <input type="text" class="form-control" id="ciudad">
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">State</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>Jalisco</option>
+          <option>CDMX</option>
+          <option>MTY</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="codigo" class="form-label">C.P.</label>
+        <input type="text" class="form-control" id="codigo">
+      </div>
+      <div class="col-4">Aceptamos:
+        <div class="form-check bg-secondary">
+          <input type="radio" name="tarj" value=""><i class="fa-brands fa-cc-mastercard"></i>
+          <input type="radio" name="tarj" value=""><i class="fa-brands fa-cc-paypal"></i>
+          <input type="radio" name="tarj" value=""><i class="fa-brands fa-cc-visa"></i>
+          <input type="radio" name="tarj" value=""><i class="fa-brands fa-cc-diners-club"></i>
+        </div>
+      </div>
+      <div class="col-2"></div>
 
-    <div class="alert alert-danger col-12" role="alert">
-      Algunos campos no se llenaron!
-    </div>
-    <div class="col-md-5">
-      <label for="tarjeta" class="form-label">Card</label>
-      <input type="text" class="form-control" id="tarjeta" placeholder="XXXXXXXXXXXX">
-    </div>
-    <div class="col-md-3">
-      <label for="cvc" class="form-label">CVC #</label>
-      <input type="text" class="form-control" id="cvc" placeholder="000">
-    </div>
-    <div class="col-md-3">
-      <label for="cantidad" class="form-label">Amount</label>
-      <input type="text" class="form-control" id="cantidad" placeholder="Amount">
-    </div>
-    <div class="col-6">
-      <label for="inputAddress" class="form-label">Nombre</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
-    <div class="col-6">
-      <label for="inputAddress2" class="form-label">apellido</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
-    <div class="col-md-6">
-      <label for="ciudad" class="form-label">Ciudad</label>
-      <input type="text" class="form-control" id="ciudad">
-    </div>
-    <div class="col-md-4">
-      <label for="inputState" class="form-label">State</label>
-      <select id="inputState" class="form-select">
-        <option selected>Choose...</option>
-        <option>Jalisco</option>
-        <option>CDMX</option>
-        <option>MTY</option>
-      </select>
-    </div>
-    <div class="col-md-2">
-      <label for="codigo" class="form-label">C.P.</label>
-      <input type="text" class="form-control" id="codigo">
-    </div>
-    <div class="col-4">Aceptamos:
-      <div class="form-check bg-secondary">
-        <input type="radio" name="tarj" value=""><i class="fa-brands fa-cc-mastercard"></i>
-        <input type="radio" name="tarj" value=""><i class="fa-brands fa-cc-paypal"></i>
-        <input type="radio" name="tarj" value=""><i class="fa-brands fa-cc-visa"></i>
-        <input type="radio" name="tarj" value=""><i class="fa-brands fa-cc-diners-club"></i>
+      <div class="col-5 mb-3 mx-auto">Comentario
+        <textarea class="col-12" name="mensaje" id="mensaje"></textarea>
+        <p class="text-muted">comentario</p>
+      </div>
+    </form>
+    <div class="card-footer mx-auto w-100 d-flex justify-content-md-end">
+      <div class="col-3 mt-2">
+        <button type="submit" class="btn btn-secondary">Cancelar</button>
+      </div>
+      <div class="col-2 mt-2">
+        <button type="submit" class="btn bg-primary">Enviar</button>
       </div>
     </div>
-    <div class="col-3"></div>
-    <div class="col-3 mb-3">Comentario
-      <textarea name="mensaje" id="mensaje" cols="45" rows="5"></textarea>
-      <p class="text-muted">comentario</p>
-    </div>
-  </form>
-  <div class="card-footer mx-auto w-50 row">
-    <div class="col-8"></div>
-    <div class="col-2 row">
-      <button type="submit" class="btn btn-secondary">Cancelar</button>
-    </div>
-    <div class="col-2">
-    <button type="submit" class="btn bg-primary">Enviar</button>
-    </div>
-  </div>
 
   </div>
-
 
 
 
